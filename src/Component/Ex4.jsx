@@ -1,16 +1,16 @@
 import React,{useState} from "react";
 function Ex4(props){
     const [num,setNum] = useState(0)
+    const [dec,setDec] = useState(0)
 
     const invalue = (val)=>{
         console.log('value=' ,val);
         setNum(num + val)
     }
 
-    const decress = (dec)=>{
-        console.log("dec" ,dec);
-
-        setNum (setNum - dec);
+    const decress = (val) =>{
+        console.log('value=', val);
+        decress = (dec-val)
     }
     return(
         <div className="container">
@@ -25,8 +25,12 @@ function Ex4(props){
                     <hr/>
 
                     <button onClick={()=> invalue(50)} className="btn btn-success">ADD + 50</button>
+                    <hr/>
 
-                    <button onClick={()=>decress (10)} classNam= "btn btn-danger">less -10</button> 
+                    <button onClick={()=>invalue (-10)} className= "btn btn-danger">less -10</button>
+                    if () {
+                        
+                    } 
                 </div>
             </div>
         </div>
