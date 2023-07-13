@@ -1,5 +1,5 @@
 import React,{ useEffect, useState} from "react";
-import post from "../screen/post";
+import Post from "../screen/post";
 
 
 
@@ -54,7 +54,7 @@ function Ex5(props){
                     {
                         post && post.map((item,index)=>{
                             return(
-                                <post key={index}/>
+                                <Post key={index} {...item}/>
                             )
                         })
                     }

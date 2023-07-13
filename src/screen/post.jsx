@@ -1,5 +1,5 @@
 import React from "react";
-function post(props){
+function Post(props){
     return(
         <div className="col-md-6 col-lg-4 col-sm-12 mt-2 mb-2">
             <div className="card">
@@ -20,4 +20,4 @@ function post(props){
         </div>
     )
 }
-export default post
+export default Post
