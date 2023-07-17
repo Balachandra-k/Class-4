@@ -7,6 +7,7 @@ import Ex5 from "./Component/Ex5";
 import Ex6 from "./Component/Ex6";
 import Ex7 from "./Component/Ex7";
 import Ex8 from "./Component/Ex8";
+import Ex9 from "./Component/Ex9";
 
 function App(props){
   return(
@@ -14,14 +15,8 @@ function App(props){
       <div className="row">
         <div className="col-md-12 text-center">
           <h3 className="display-3 text-success">ReactHOOK</h3>
-          {/* <Ex1/> 
-          <Ex2/>
-          <Ex3/>\
-          <Ex4/>
-          <Ex5/>
-          <Ex6/>
-          <Ex7/>*/}
-          <Ex8/>
+
+          <Ex9 itemPerPage = {50}/>
         </div>
       </div>
     </div>
