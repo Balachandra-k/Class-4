@@ -31,7 +31,7 @@ function Ex9 (props){
             fetch (`${URL}/comments`)
             .then(out => out.json())
             .then(res => {
-                console.log(`comments = ` ,res);
+                // console.log(`comments = ` ,res);
                 setComments(res)
             }).catch(err => console.log(err.message))
 
@@ -44,6 +44,12 @@ function Ex9 (props){
         getComments() // callback method call
         setOffData(comments.slice(start,end))
     },[comments])
+        const handlerClick = (e) => {
+            // console.log(`item=`,e.selected);
+            let noffset = Number(e.selected * props.itemPerPage) % comments.length;
+            setStart(noffset)
+        }
+
     return(
         <div className="container">
             <div className="row">
@@ -61,6 +67,23 @@ function Ex9 (props){
                         )
                     })
                 }
+            </div>
+            <div className="row">
+                <div className="col-md-12">
+                    <ReactPaginate
+                    pageCount={pCount}
+                    className="pagination"
+                    activeClassName="active"
+                    activeLinkClassName="active"
+                    pageClassName="page-item"
+                    pageLinkClassName="page-link"
+                    previousClassName="page-item"
+                    previousLinkClassName="page-link"
+                    nextClassName="page-item"
+                    nextLinkClassName="page-link"
+                    onPageChange={handlerClick}
+                    />
+                </div>
             </div>
         </div>
     )
